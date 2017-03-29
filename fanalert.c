@@ -64,7 +64,7 @@ update(gpointer data)
 		char *line, *save;
 		gboolean broke = FALSE;
 		for (line = strtok_r(buf, "\n", &save); line != NULL; line = strtok_r(NULL, "\n", &save)) {
-			if (strstr(line, "speed:") && strstr(line, "65536")) {
+			if (strstr(line, "speed:") && strstr(line, "65535")) {
 				broke = TRUE; // fan is not working D:
 			}
 		}
